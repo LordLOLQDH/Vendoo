@@ -137,3 +137,68 @@ body{background:#fff}
 .account-logout:hover{background:#fbf3f1}
 @media(max-width:760px){.account-welcome{grid-template-columns:1fr;padding:35px 27px 25px;gap:4px;border-radius:24px}.account-welcome h2{font-size:49px}.account-welcome-copy>p{font-size:12px}.account-welcome-art{height:255px;width:min(100%,390px);justify-self:center;margin-top:5px}.account-art-back{height:190px}.account-art-front{height:205px}.account-art-orb{width:82px;height:82px}.account-preview-grid{grid-template-columns:1fr;gap:10px}.account-preview-card{padding:17px 18px}.account-dashboard-head{padding:25px 22px;border-radius:20px}.account-dashboard-head h2{font-size:24px}.account-avatar{width:52px;height:52px;border-radius:17px}.account-stats{gap:9px}.account-stat{padding:16px 13px;min-height:120px;border-radius:16px}.account-stat>span{font-size:8px;line-height:1.4}.account-stat>strong{font-size:24px}.account-stat>small{font-size:9px}.account-dashboard-grid{grid-template-columns:1fr}.account-detail-card{padding:22px;border-radius:18px}}
 @media(max-width:430px){.account-welcome{padding:30px 21px 20px}.account-welcome h2{font-size:44px}.account-cta{align-items:flex-start;flex-direction:column;gap:15px}.account-welcome-art{height:225px}.account-art-back{height:170px}.account-art-front{height:185px}.account-art-front strong{font-size:22px}.account-stats{grid-template-columns:1fr 1fr}.account-stat-muted{grid-column:1/-1;min-height:90px}.account-dashboard-head h2{font-size:21px}}
+
+/* Vendoo account: editorial member-space concept */
+body.account-page{background:#f3f4ef;color:#171d19;min-height:100vh}
+.account-header{height:88px;padding:0 clamp(22px,5vw,76px);display:flex;align-items:center;border-bottom:1px solid #dfe3dc;background:#f3f4ef}
+.account-header .logo{font:800 31px Manrope,Arial,sans-serif;letter-spacing:-2.3px;color:#171d19;text-decoration:none}
+.account-header .logo span{color:#416c53}
+.account-header-label{margin-left:55px;color:#7b847a;font-size:9px;font-weight:800;letter-spacing:.17em}
+.account-header-label span{padding:0 7px;color:#b4bcb2}
+.account-header nav{margin-left:auto;display:flex;gap:30px}
+.account-header nav a{font-size:11px;font-weight:700;color:#3a453c;text-decoration:none}
+.account-shell{max-width:1370px;margin:0 auto;padding:34px clamp(22px,5vw,76px) 24px}
+.account-topline{display:flex;justify-content:space-between;padding-bottom:15px;border-bottom:1px solid #dfe3dc;color:#657568;font-size:9px;font-weight:800;letter-spacing:.16em}
+.account-topline span:last-child{color:#9ba398}
+.account-intro{min-height:550px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4%;padding:42px 2px 50px}
+.account-intro-copy{max-width:590px;padding:12px 0}
+.account-index{margin:0 0 25px;color:#6c796d;font-size:9px;font-weight:800;letter-spacing:.16em}
+.account-index span{padding:0 8px;color:#b5bdb3}
+.account-intro h1{margin:0;font:750 clamp(54px,7vw,94px)/.94 Manrope,Arial,sans-serif;letter-spacing:-.085em;color:#19221b}
+.account-intro h1 em{font-family:"Playfair Display",Georgia,serif;font-weight:500;color:#477153;letter-spacing:-.065em}
+.account-lead{max-width:440px;margin:29px 0 0;color:#778077;font-size:14px;line-height:1.85}
+.account-actions{display:flex;align-items:center;gap:25px;margin-top:34px}
+.account-primary{display:inline-flex;align-items:center;gap:35px;padding:17px 21px;border-radius:3px;background:#203329;color:#fff;text-decoration:none;font-size:11px;font-weight:700;transition:background .2s,transform .2s}
+.account-primary:hover{background:#416c53;transform:translateY(-2px)}
+.account-primary i{width:8px;height:8px;border-top:1.5px solid white;border-right:1.5px solid white;transform:rotate(45deg)}
+.account-secondary{color:#314b38;text-decoration:none;font-size:11px;font-weight:700}
+.account-secondary:hover{text-decoration:underline}
+.account-art{height:420px;position:relative;max-width:520px;width:100%;justify-self:end}
+.art-outline{position:absolute;inset:25px 18px 25px 45px;border:1px solid #c8d2c7;border-radius:48% 48% 4px 4px;transform:rotate(7deg)}
+.art-disc{position:absolute;width:285px;height:285px;right:8%;top:14px;border-radius:50%;background:linear-gradient(140deg,#dce7d8,#a9bea9 60%,#809a83);box-shadow:inset -25px -20px 45px rgba(43,74,49,.12)}
+.art-block{position:absolute;left:9%;bottom:12px;width:74%;height:315px;padding:25px 29px;background:#24392c;color:#f3f4ed;display:flex;flex-direction:column;justify-content:space-between;box-shadow:20px 22px 0 rgba(69,102,75,.12);transform:rotate(-4deg)}
+.art-block>span{font-size:9px;font-weight:800;letter-spacing:.17em;color:#bdcbbb}
+.art-block strong{font:800 clamp(39px,4.3vw,59px)/.88 Manrope,Arial,sans-serif;letter-spacing:-.075em}
+.art-block strong em{font-family:"Playfair Display",Georgia,serif;font-weight:500;color:#b8cfb7}
+.art-block small{font-size:8px;letter-spacing:.17em;color:#bdcbbb}
+.art-caption{position:absolute;right:0;bottom:-8px;color:#8c988c;font-size:8px;font-weight:800;letter-spacing:.17em}
+.account-lower{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:14px;align-items:stretch;padding:28px 0 24px;border-top:1px solid #dfe3dc}
+.account-lower-heading{padding:14px 12px 14px 0}
+.account-lower-heading>span{font-size:9px;font-weight:800;letter-spacing:.16em;color:#5f765f}
+.account-lower-heading p{max-width:200px;color:#818a80;font-size:11px;line-height:1.7}
+.account-link-card{min-height:104px;display:flex;align-items:center;gap:16px;padding:18px 20px;background:#e9ede6;color:#202a22;text-decoration:none;transition:background .2s,transform .2s}
+.account-link-card:hover{background:#e0e8dd;transform:translateY(-3px)}
+.link-number{align-self:flex-start;color:#7c8c7d;font-size:9px;font-weight:800;letter-spacing:.1em}
+.link-copy{display:grid;gap:7px}
+.link-copy strong{font:700 17px Manrope;letter-spacing:-.5px}
+.link-copy small{color:#7c857b;font-size:10px}
+.link-arrow{margin-left:auto;width:10px;height:10px;border-top:1.5px solid #4b6a50;border-right:1.5px solid #4b6a50;transform:rotate(45deg)}
+.account-footnote{display:flex;align-items:center;gap:9px;margin:16px 0 0;color:#969e94;font-size:9px;line-height:1.6}
+.account-footnote span{width:6px;height:6px;border-radius:50%;background:#b6a477}
+.account-logged{min-height:480px}
+.account-user-chip{display:flex;align-items:center;gap:13px;margin-top:30px}
+.account-user-chip>span{width:43px;height:43px;display:grid;place-items:center;background:#dce7d8;color:#35563c;font:700 17px Manrope}
+.account-user-chip div{display:grid;gap:4px}
+.account-user-chip small{font-size:8px;font-weight:800;letter-spacing:.13em;color:#889286}
+.account-user-chip strong{font-size:12px}
+.account-logged-lower{grid-template-columns:1fr 1fr 1.2fr}
+.account-profile-card{display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:18px 20px;background:#e9ede6}
+.account-profile-card>strong{font:700 16px Manrope;overflow-wrap:anywhere}
+.account-profile-card>small{color:#7c857b;font-size:10px;overflow-wrap:anywhere}
+.account-logout{margin-top:8px;border:0;border-bottom:1px solid #9caaa0;padding:7px 0;background:none;color:#6e514b;font:700 10px "DM Sans";cursor:pointer}
+.account-logout:hover{color:#a04439}
+.account-footer{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-top:1px solid #dfe3dc}
+.account-footer a{color:#536a56;font-size:10px;font-weight:700;text-decoration:none}
+.account-footer span{color:#a0a89e;font-size:8px;font-weight:700;letter-spacing:.13em}
+@media(max-width:760px){.account-header{height:72px;padding:0 19px}.account-header-label{display:none}.account-header nav{gap:17px}.account-shell{padding:25px 19px}.account-intro{grid-template-columns:1fr;gap:0;padding:34px 0 32px}.account-intro h1{font-size:clamp(54px,12vw,78px)}.account-lead{font-size:12px;margin-top:22px}.account-art{height:320px;width:min(100%,430px);justify-self:center;margin-top:25px}.art-disc{width:220px;height:220px}.art-block{height:245px;width:77%;padding:20px 22px}.art-block strong{font-size:48px}.account-lower,.account-logged-lower{grid-template-columns:1fr 1fr;gap:10px}.account-lower-heading{grid-column:1/-1;padding:5px 0}.account-profile-card{grid-column:1/-1}.account-footer span{display:none}}
+@media(max-width:430px){.account-header .logo{font-size:27px}.account-header nav{gap:12px}.account-header nav a{font-size:10px}.account-topline{font-size:8px}.account-intro h1{font-size:52px}.account-actions{gap:17px;flex-wrap:wrap}.account-art{height:280px}.art-disc{width:190px;height:190px}.art-block{height:220px}.art-block strong{font-size:42px}.account-lower,.account-logged-lower{grid-template-columns:1fr}.account-lower-heading,.account-profile-card{grid-column:auto}.account-link-card{min-height:88px}}

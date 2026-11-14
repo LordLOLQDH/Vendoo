@@ -1,77 +1,10 @@
 <!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f8fa">
-  <meta name="description" content="Vendoo – Entdecke besondere Dinge. Finde deinen nächsten Lieblingsfund.">
-  <title>Vendoo – Finden. Lieben. Kaufen.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
-</head>
-<body>
-  <div class="announcement">Dein nächster Lieblingsfund wartet schon.</div>
-  <header class="site-header">
-    <a class="brand" href="#" aria-label="Vendoo Startseite">vendoo<span>.</span></a>
-    <form class="search" id="search-form" role="search">
-      <span aria-hidden="true">⌕</span>
-      <input id="search-input" type="search" placeholder="Wonach suchst du?" autocomplete="off" aria-label="Produkte suchen">
-      <button type="submit">Suchen</button>
-    </form>
-    <nav class="header-actions" aria-label="Hauptnavigation">
-      <button class="text-button" id="sell-button">Verkaufen</button>
-      <button class="icon-button" id="favorites-button" aria-label="Merkliste">♡ <span class="action-label">Merkliste</span><b id="favorite-count">0</b></button>
-      <button class="profile-button" id="account-button">Anmelden</button>
-      <button class="cart-button" id="cart-button">Warenkorb <span id="cart-count">0</span></button>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">ENTDECKEN BEGINNT HIER</p>
-        <h1>Finde Dinge,<br><em>die zu dir passen.</em></h1>
-        <p class="hero-description">Neue Lieblingsstücke, gute Preise und kleine Überraschungen. Alles an einem Ort.</p>
-        <a class="primary-link" href="#discover">Jetzt entdecken <span>↗</span></a>
-      </div>
-      <div class="hero-art" aria-label="Ausgewählte Produkte">
-        <div class="art-note">Gute Funde.<br>Gute Gefühle.</div>
-        <div class="art-circle circle-one"></div><div class="art-circle circle-two"></div>
-        <div class="art-card art-card-back"><div class="art-object headphones"></div><span>TECH & GADGETS</span></div>
-        <div class="art-card art-card-front"><div class="art-object bag"></div><span>DEIN NEUER FAVORIT</span></div>
-        <div class="art-spark">✳</div>
-      </div>
-    </section>
-
-    <section class="category-section" aria-label="Kategorien">
-      <div class="section-heading"><div><p class="eyebrow">STÖBER DICH GLÜCKLICH</p><h2>Was suchst du?</h2></div><button class="plain-link" id="all-categories">Alle Kategorien ↗</button></div>
-      <div class="category-list" id="category-list">
-        <button class="category active" data-category="Alle"><span class="category-icon">✳</span><span>Alles</span></button>
-        <button class="category" data-category="Elektronik"><span class="category-icon">⌁</span><span>Elektronik</span></button>
-        <button class="category" data-category="Mode"><span class="category-icon">◒</span><span>Mode</span></button>
-        <button class="category" data-category="Wohnen"><span class="category-icon">⌂</span><span>Wohnen</span></button>
-        <button class="category" data-category="Sport"><span class="category-icon">↗</span><span>Sport</span></button>
-        <button class="category" data-category="Bücher"><span class="category-icon">▤</span><span>Bücher</span></button>
-        <button class="category" data-category="Accessoires"><span class="category-icon">◇</span><span>Accessoires</span></button>
-      </div>
-    </section>
-
-    <section class="products-section" id="discover">
-      <div class="section-heading product-heading"><div><p class="eyebrow">FÜR DICH AUSGESUCHT</p><h2>Beliebte Fundstücke</h2></div><label class="sort-label">Sortieren <select id="sort-select"><option value="recommended">Empfohlen</option><option value="low">Preis: aufsteigend</option><option value="high">Preis: absteigend</option></select></label></div>
-      <div class="results-line" id="results-line">Entdecke ausgewählte Produkte</div>
-      <div class="product-grid" id="product-grid" aria-live="polite"></div>
-      <div class="empty-state" id="empty-state" hidden><h3>Nichts gefunden.</h3><p>Versuche einen anderen Suchbegriff oder eine andere Kategorie.</p><button class="secondary-button" id="reset-filters">Filter zurücksetzen</button></div>
-    </section>
-    <section class="seller-banner"><div><p class="eyebrow">PLATZ FÜR NEUES SCHAFFEN</p><h2>Mach anderen eine Freude.<br><em>Verkaufe, was du nicht mehr brauchst.</em></h2></div><button id="sell-banner-button">Jetzt verkaufen ↗</button></section>
-  </main>
-
-  <footer><a class="brand" href="#">vendoo<span>.</span></a><p>Finden. Lieben. Kaufen.</p><div><a href="#discover">Entdecken</a><a href="#" id="footer-sell">Verkaufen</a><a href="mailto:hello@vendoo.example">Kontakt</a></div><small>© 2026 Vendoo. Ein Projekt im Aufbau.</small></footer>
-
-  <dialog id="product-dialog" class="modal"><button class="modal-close" data-close aria-label="Schließen">×</button><div id="product-detail"></div></dialog>
-  <dialog id="message-dialog" class="modal message-modal"><button class="modal-close" data-close aria-label="Schließen">×</button><p class="eyebrow">VENDOO</p><h2 id="message-title">Demnächst verfügbar</h2><p id="message-body">Diese Funktion wird gerade vorbereitet.</p><button class="primary-button" data-close>Verstanden</button></dialog>
-  <dialog id="cart-dialog" class="modal cart-modal"><button class="modal-close" data-close aria-label="Schließen">×</button><p class="eyebrow">DEINE AUSWAHL</p><h2>Warenkorb</h2><div id="cart-items"></div><div class="cart-total" id="cart-total"></div><p class="fine-print">Demo: Es werden noch keine echten Bestellungen oder Zahlungen verarbeitet.</p></dialog>
-</body>
-</html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f7f4"><meta name="description" content="Vendoo – Entdecke Produkte, die deinen Alltag besser machen."><title>Vendoo – Entdecken</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<body><div class="topline">Entdecken. Vergleichen. Deinen Fund machen.</div><header class="header"><a class="logo" href="index.html">vendoo<span>.</span></a><form class="search" id="search-form"><input id="search-input" type="search" placeholder="Produkte, Marken und mehr suchen" aria-label="Produkte suchen"><button aria-label="Suchen">Suchen</button></form><nav class="nav"><a href="sell.html">Verkaufen</a><a href="account.html">Mein Konto</a><a href="favorites.html">Merkliste <span id="favorite-count">0</span></a><a class="nav-cart" href="cart.html">Warenkorb <span id="cart-count">0</span></a></nav><button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen">Menü</button></header>
+<main><section class="hero"><div class="hero-content"><p class="kicker">DER MARKTPLATZ FÜR DEINE ENTDECKUNGEN</p><h1>Gute Dinge.<br><span>Gute Entscheidungen.</span></h1><p>Finde Produkte, die zu deinem Leben passen. Entdecke Neues und stöbere durch Angebote aus verschiedenen Kategorien.</p><a class="button button-dark" href="#angebote">Produkte entdecken <span>→</span></a></div><div class="hero-visual"><div class="hero-panel"><div class="hero-panel-top"><span>VENDOO SELECTION</span><span>01 / 04</span></div><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1100&q=85" alt="Ausgewählte Sneaker"><div class="hero-panel-bottom"><div><small>AKTUELL ENTDECKEN</small><strong>Dein nächster Fund.</strong></div><span class="hero-arrow">↗</span></div></div><div class="hero-index">01 — ENTDECKEN</div></div></section>
+<section class="trust-strip"><div><strong>Einfach entdecken</strong><span>Finde Produkte ohne Umwege.</span></div><div><strong>Alles im Blick</strong><span>Merkliste und Warenkorb an einem Ort.</span></div><div><strong>Wächst mit dir</strong><span>Ein Marktplatz im Aufbau.</span></div></section>
+<section class="section" id="angebote"><div class="section-head"><div><p class="kicker">DEIN NÄCHSTER FUND</p><h2>Jetzt entdecken</h2><p class="section-sub">Ausgewählte Produkte aus verschiedenen Bereichen.</p></div><div class="sort-control"><label for="sort-select">Sortieren</label><select id="sort-select"><option value="featured">Empfohlen</option><option value="low">Preis aufsteigend</option><option value="high">Preis absteigend</option><option value="name">Name</option></select></div></div>
+<div class="filters" id="category-list"><button class="filter active" data-category="Alle">Alle Produkte</button><button class="filter" data-category="Elektronik">Elektronik</button><button class="filter" data-category="Mode">Mode</button><button class="filter" data-category="Wohnen">Wohnen</button><button class="filter" data-category="Sport">Sport</button><button class="filter" data-category="Bücher">Bücher</button><button class="filter" data-category="Accessoires">Accessoires</button></div>
+<div class="catalog-meta"><span id="results-line">Produkte werden geladen</span><button id="clear-filters" class="subtle-button">Filter zurücksetzen</button></div><div class="product-grid" id="product-grid"></div><div class="empty-state" id="empty-state" hidden><h3>Keine passenden Produkte</h3><p>Ändere deine Suche oder setze die Filter zurück.</p><button class="button button-outline" id="reset-empty">Alle Produkte anzeigen</button></div></section>
+<section class="sell-callout"><div><p class="kicker">PLATZ FÜR NEUES</p><h2>Mach aus ungenutzten Dingen<br>etwas Gutes.</h2><p>Stelle deine Produkte ein und erreiche Menschen, die genau danach suchen.</p></div><a class="button button-light" href="sell.html">Artikel anbieten <span>→</span></a></section></main>
+<footer class="footer"><a class="logo" href="index.html">vendoo<span>.</span></a><p>Ein Marktplatz in Entwicklung.</p><div class="footer-links"><a href="sell.html">Verkaufen</a><a href="account.html">Mein Konto</a><a href="README.md">Über Vendoo</a></div><small>© 2026 Vendoo</small></footer></body></html>
